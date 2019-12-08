@@ -6,15 +6,24 @@ export default class Navbar extends Component {
         return (
             <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
                 <Link to="/" className="navbar-brand">Exercise Tracker</Link>
-                <div className="collapse navbar-collapse">
+                    <button className="navbar-toggler" 
+                        type="button" 
+                        data-toggle="collapse" 
+                        data-target="#navbarNav" 
+                        aria-controls="navbarNav" 
+                        aria-expanded="false" 
+                        aria-label="Toggle Navigation">
+                        <span className="navbar-toggler-icon"></span> 
+                    </button>
+                <div className="collapse navbar-collapse" id="navbarNav" data-target="#navbarNav">
                     <ul className="navbar-nav mr-auto">
-                        <li className="navbar-item">
+                        <li className="nav-item" data-toggle="collapse" data-target="#navbarNav">
                             <Link to="/" className="nav-link">Exercises</Link>
                         </li>
-                        <li className="navbar-item">
-                            <Link to="/create" className="nav-link">Create Exercise Log</Link>
+                        <li className="nav-item" data-toggle="collapse" data-target="#navbarNav">
+                            <Link to="/create" className="nav-link" >Create Exercise Log</Link>
                         </li>
-                        <li className="navbar-item">
+                        <li className="nav-item" data-toggle="collapse" data-target="#navbarNav">
                             <Link to="/user" className="nav-link">Create User</Link>
                         </li>
                     </ul>
