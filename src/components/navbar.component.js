@@ -17,13 +17,13 @@ export default class Navbar extends Component {
                     </button>
                 <div className="collapse navbar-collapse" id="navbarNav" data-target="#navbarNav">
                     <ul className="navbar-nav mr-auto">
-                        <li className="nav-item" data-toggle="collapse" data-target="#navbarNav">
+                        <li className="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
                             <Link to="/" className="nav-link">Exercises</Link>
                         </li>
-                        <li className="nav-item" data-toggle="collapse" data-target="#navbarNav">
+                        <li className="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
                             <Link to="/create" className="nav-link" >Create Exercise Log</Link>
                         </li>
-                        <li className="nav-item" data-toggle="collapse" data-target="#navbarNav">
+                        <li className="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
                             <Link to="/user" className="nav-link">Create User</Link>
                         </li>
                     </ul>
