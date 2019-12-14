@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 export default class CreateUser extends Component {
     constructor(props){
@@ -15,23 +16,27 @@ export default class CreateUser extends Component {
     onChangeUsername(e){
         this.setState({
             username: e.target.value
-        })
+        });
     }
 
     
-    onSubmit(e){
+    onSubmit(e) {
         e.preventDefault();
-
+    
         const user = {
-            username: this.state.username,
+          username: this.state.username
         }
-
+    
         console.log(user);
     
+        axios.post('http://localhost:8080/users/add', user)
+            .then(res => console.log(res.data))
+            .catch(error => console.log(error.response));
+    
         this.setState({
-            username: ''
+          username: ''
         })
-    }
+      }
 
     render() {
         return (
