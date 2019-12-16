@@ -69,7 +69,6 @@ export default class CreateExercise extends Component {
             date: this.state.date
         }
 
-        console.log(exercise);
 
         axios.post('http://localhost:8080/exercises/add', exercise)
             .then(res => console.log(res.data))
