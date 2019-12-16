@@ -4,9 +4,19 @@ This is an exercise tracking app and it's built with MongoDB, Express, React, No
 
 In the project directory, you can run:
 
-### `yarn start`
+```bash
+# Install dependencies
+npm install
 
-Runs the app in the development mode.<br />
-Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
 
+# Run the client & server with concurrently
+npm run dev
 
+# Run the Express server only
+npm run server
+
+# Run the React client only
+npm start
+
+# Server runs on http://localhost:8080 and client on http://localhost:3000
+```
