@@ -28,7 +28,7 @@ export default class CreateUser extends Component {
         }
     
     
-        axios.post('http://localhost:8080/users/add', user)
+        axios.post('/users/add', user)
             .then(res => console.log(res.data))
             .catch(error => console.log(error.response));
     
@@ -52,7 +52,13 @@ export default class CreateUser extends Component {
                         />     
                     </div>
                     <div className="form-group">
-                        <input type="submit" value="Create User" className="btn btn-primary" />
+                        {/* <input type="submit" value="Create User" className="btn btn-primary" /> */}
+                        <button 
+                            className="btn btn-primary"
+                            onClick={e =>
+                            alert("New User created")}>
+                            Create User
+                        </button>
                     </div>
                 </form>
             </div>

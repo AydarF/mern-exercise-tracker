@@ -14,8 +14,19 @@ app.use(cors());
 app.use(express.json());
 
 const uri = process.env.ATLAS_URI;
-mongoose.connect(uri, {useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true });
+mongoose.connect(uri, {type: "mongodb", useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true, ssl: true,
+    authSource: "admin" })
+    .then(() => console.log("MongoDB server connect"))
+    .catch(e => console.log("MongoDB error", e));
+
 const connection = mongoose.connection;
+
+if(!connection){
+    console.log("Error connecting MongoDB");
+} else {
+    console.log("MongoDB database is connected!");
+}
+
 connection.once('open', () => {
     console.log("MongoDB database connection is established successfully!");
 })
