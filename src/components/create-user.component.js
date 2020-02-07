@@ -56,7 +56,7 @@ export default class CreateUser extends Component {
                         <button 
                             className="btn btn-primary"
                             onClick={e =>
-                                alert("New User " + this.state.username + " created")}>
+                                alert("User " + this.state.username + " created")}>
                                 Create User
                         </button>
                     </div>
